@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug Java Applet",
+            "request": "launch",
+            "mainClass": "C4Applet",
+            "projectName": "ConnectFour",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

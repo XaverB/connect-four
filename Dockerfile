@@ -1,20 +1,24 @@
-# Use an official Java runtime as a parent image
-FROM openjdk:11-jdk
+# Use an official Java 8 JDK image from the Docker Hub
+FROM openjdk:8-jdk
 
-# Set the working directory to /workspace
+# Set the working directory inside the container
 WORKDIR /workspace
 
-# Copy the current directory contents into the container at /workspace
+# Copy the local directory contents to the container
 COPY . /workspace
 
-# Install any needed packages specified in requirements.txt
-# RUN apt-get update && apt-get install -y maven
+# Install necessary packages for Java GUI applications
+RUN apt-get update && apt-get install -y \
+    x11-apps \
+    libxtst6 \
+    libxrender1 \
+    libxi6 \
+    net-tools \
+    && rm -rf /var/lib/apt/lists/*
 
-# Make port 4000 available to the world outside this container
-EXPOSE 4000
+# Set environment variables to configure Java and X11 forwarding
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV DISPLAY host.docker.internal:0.0
 
-# Define environment variable
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
-
-# Run app when the container launches
-CMD ["appletviewer", "c4.html"]
+# The command that runs when the container starts
+CMD ["bash"]

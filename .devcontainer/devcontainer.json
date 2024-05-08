@@ -1,0 +1,25 @@
+{
+    "name": "Java Development",
+    "build": {
+      "dockerfile": "../Dockerfile",
+      "context": ".."
+    },
+    "customizations": {
+      "vscode": {
+        "settings": { 
+          "terminal.integrated.shell.linux": "/bin/bash"
+          // "java.jdt.ls.java.home": "/usr/lib/jvm/java-8-openjdk-amd64"
+        },
+        "extensions": [
+          "vscjava.vscode-java-pack"
+        ]
+      }
+    },
+
+    "forwardPorts": [],
+    "postCreateCommand": "echo 'Container ready!'",
+    "remoteUser": "root",
+    "runArgs": [
+      "-e", "DISPLAY=host.docker.internal:0.0"
+    ]    
+  }

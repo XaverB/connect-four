@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Java Applet",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "src/C4Applet.java",
+                "-d",
+                "bin"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$javac"
+        },
+        {
+            "label": "Copy HTML to bin",
+            "type": "shell",
+            "command": "cp",
+            "args": [
+                "res/c4.html",
+                "bin/c4.html"
+            ],
+            "dependsOn": "Compile Java Applet"
+        },
+        {
+            "label": "Run Java Applet",
+            "type": "shell",
+            "command": "appletviewer",
+            "args": [
+                "bin/c4.html"
+            ],
+            "dependsOn": "Copy HTML to bin",
+            "group": "test"
+        }
+    ]
+}

@@ -11,7 +11,7 @@
  *
  */
 
-import com.sun.org.apache.xml.internal.resolver.helpers.FileURL;
+// import com.sun.org.apache.xml.internal.resolver.helpers.FileURL;
 
 import java.applet.*;
 import java.awt.*;
