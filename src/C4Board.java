@@ -17,7 +17,8 @@ public final class C4Board implements Board {
   public final static int SECOND_PLAYER_NUMBER = 1;
 
   public static final int NUMBER_OF_ROWS = 6; // the height of the board
-  public static final int NUMBER_OF_COLUMNS = 8; // the width of the board
+  // FH: Change to regular field size 7
+  public static final int NUMBER_OF_COLUMNS = 7; // the width of the board
   public static final int NUMBER_OF_SLOTS = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
 
 //------------------------------------------
@@ -82,8 +83,13 @@ public final class C4Board implements Board {
     }
 
     // create the rows
-
-    rows = new Vector<C4Row>(84);
+    // FH: vector of the capacity of win conditions
+    // TODO: Explain in detail
+    int horizontalWins = NUMBER_OF_ROWS * (NUMBER_OF_COLUMNS - 3);
+    int verticalWins = NUMBER_OF_COLUMNS * (NUMBER_OF_ROWS - 3);
+    int diagonalWins = 2 * ((NUMBER_OF_COLUMNS -3) * (NUMBER_OF_ROWS-3));
+    int allPossibleWins = horizontalWins + verticalWins + diagonalWins;
+    rows = new Vector<C4Row>(allPossibleWins);
 
     /*
      * choose all possible groups of 4 slots a group of four is determined by 2
@@ -125,7 +131,7 @@ public final class C4Board implements Board {
 
       } // end for column
     } // end for row
-
+    System.out.println("Totalnumber" + rows.size());
   }
 
 //--------------------------------------
