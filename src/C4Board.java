@@ -186,6 +186,7 @@ public final class C4Board implements Board {
       numberOfChipsInColumn[i] = 0;
     }
     stats = new C4Stats();
+    stats.reset();
     moveHistoryLength = 0;
   }
 
