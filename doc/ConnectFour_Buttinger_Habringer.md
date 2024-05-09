@@ -457,6 +457,8 @@ The respective formula is
 
 Communication of the components is done via event handlers that get registered every time the state of the respective row changes. The handlers update the stats of the players. Those stats are used to calculate the player strength. of both players.
 
+To fix the heuristic we have to reset the stats object inside the board object. The `C4Stats` class stores board stats in static fields. Those fields need to be reset when the `board.restartGame()` is called.
+
 ## Task 8
 
 ### Alpha-Beta Pruning Effects
