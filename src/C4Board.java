@@ -46,6 +46,8 @@ public final class C4Board implements Board {
   private Move[] firstPlayerMoves;
   private Move[] secondPlayerMoves;
 
+  private int[] PREFERED_ORDER_OF_MOVES = {3,4,2,5,1,6,0,7};
+
 //------------------------------------------
   // constructors
 
@@ -57,9 +59,10 @@ public final class C4Board implements Board {
     firstPlayerMoves = new Move[NUMBER_OF_COLUMNS];
     secondPlayerMoves = new Move[NUMBER_OF_COLUMNS];
 
+    // FH: change ordering of columns to order middle moves first
     for (int i = 0; i < NUMBER_OF_COLUMNS; i++) {
-      firstPlayerMoves[i] = new C4Move(firstPlayer, i);
-      secondPlayerMoves[i] = new C4Move(secondPlayer, i);
+      firstPlayerMoves[i] = new C4Move(firstPlayer, PREFERED_ORDER_OF_MOVES[i]);
+      secondPlayerMoves[i] = new C4Move(secondPlayer, PREFERED_ORDER_OF_MOVES[i]);
     }
 
   }// end constructor
