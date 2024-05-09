@@ -3,7 +3,8 @@
 
 
 ## Task 1
-
+Comparison of the moves for every stage of the repsective tasks.
+![tableOfMoves](./assets/1_tableOfMoves.png)
 
 
 ## Task 2
