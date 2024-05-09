@@ -84,9 +84,12 @@ public final class C4Board implements Board {
 
     // create the rows
     // FH: vector of the capacity of win conditions
-    // TODO: Explain in detail
+    // Offset of 3 is necessary to get all positions were 4 pices can be next to each other
     int horizontalWins = NUMBER_OF_ROWS * (NUMBER_OF_COLUMNS - 3);
     int verticalWins = NUMBER_OF_COLUMNS * (NUMBER_OF_ROWS - 3);
+    // For diagonal wins we have to get all possible positions from which 
+    // we can achieve a diagonal line and multiply it by 2 since we can
+    // either get it right/left diagonal
     int diagonalWins = 2 * ((NUMBER_OF_COLUMNS -3) * (NUMBER_OF_ROWS-3));
     int allPossibleWins = horizontalWins + verticalWins + diagonalWins;
     rows = new Vector<C4Row>(allPossibleWins);
@@ -131,7 +134,7 @@ public final class C4Board implements Board {
 
       } // end for column
     } // end for row
-    System.out.println("Totalnumber" + rows.size());
+    //System.out.println("Totalnumber" + rows.size());
   }
 
 //--------------------------------------
