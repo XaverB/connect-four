@@ -46,6 +46,8 @@ public final class C4Board implements Board {
   private Move[] firstPlayerMoves;
   private Move[] secondPlayerMoves;
 
+  private int[] PREFERED_ORDER_OF_MOVES = {3,4,2,5,1,6,0,7};
+
 //------------------------------------------
   // constructors
 
@@ -57,9 +59,10 @@ public final class C4Board implements Board {
     firstPlayerMoves = new Move[NUMBER_OF_COLUMNS];
     secondPlayerMoves = new Move[NUMBER_OF_COLUMNS];
 
+    // FH: change ordering of columns to order middle moves first
     for (int i = 0; i < NUMBER_OF_COLUMNS; i++) {
-      firstPlayerMoves[i] = new C4Move(firstPlayer, i);
-      secondPlayerMoves[i] = new C4Move(secondPlayer, i);
+      firstPlayerMoves[i] = new C4Move(firstPlayer, PREFERED_ORDER_OF_MOVES[i]);
+      secondPlayerMoves[i] = new C4Move(secondPlayer, PREFERED_ORDER_OF_MOVES[i]);
     }
 
   }// end constructor
@@ -82,8 +85,16 @@ public final class C4Board implements Board {
     }
 
     // create the rows
-
-    rows = new Vector<C4Row>(84);
+    // FH: vector of the capacity of win conditions
+    // Offset of 3 is necessary to get all positions were 4 pices can be next to each other
+    int horizontalWins = NUMBER_OF_ROWS * (NUMBER_OF_COLUMNS - 3);
+    int verticalWins = NUMBER_OF_COLUMNS * (NUMBER_OF_ROWS - 3);
+    // For diagonal wins we have to get all possible positions from which 
+    // we can achieve a diagonal line and multiply it by 2 since we can
+    // either get it right/left diagonal
+    int diagonalWins = 2 * ((NUMBER_OF_COLUMNS -3) * (NUMBER_OF_ROWS-3));
+    int allPossibleWins = horizontalWins + verticalWins + diagonalWins;
+    rows = new Vector<C4Row>(allPossibleWins);
 
     /*
      * choose all possible groups of 4 slots a group of four is determined by 2
