@@ -42,4 +42,6 @@ public interface BoardStats {
    */
   public int getMinStrength();
 
+  public void reset();
+
 }// end interface BoardStats
