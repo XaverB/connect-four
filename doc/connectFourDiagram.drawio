@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-16T04:23:03.275Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="U_d_TlJzkHV4UfUOxP6w" version="24.4.0" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-16T04:35:33.073Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="t_PopVlr_cAuftn0pMdQ" version="24.4.2" type="device">
   <diagram name="Seite-1" id="ZO7_gdMF7UllygbiJD4x">
     <mxGraphModel dx="2421" dy="759" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1188,7 +1188,7 @@
         <mxCell id="8jhZL6ctZtWlZPXJob7D-808" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;... Min Node&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri; font-size: 30px; text-align: center;&quot;&gt;β&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; font-size: 30px; text-align: center;&quot;&gt;Changes&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-545" y="256" width="297" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t_Hln2qc5jsmr6ZP2a2K-1" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;[α = 3&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;,&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 30px; background-color: initial; font-family: Calibri;&quot;&gt;β =&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 30px; background-color: initial;&quot;&gt;∞]&lt;/span&gt;&lt;br&gt;&lt;p style=&quot;font-size: 24px;&quot; class=&quot;MsoNormal&quot;&gt;&lt;/p&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+        <mxCell id="t_Hln2qc5jsmr6ZP2a2K-1" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;[α = 3&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;,&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 30px; background-color: initial; font-family: Calibri;&quot;&gt;β =&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 30px; background-color: initial;&quot;&gt;2]&lt;/span&gt;&lt;br&gt;&lt;p style=&quot;font-size: 24px;&quot; class=&quot;MsoNormal&quot;&gt;&lt;/p&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
           <mxGeometry x="168" y="226" width="200" height="40" as="geometry" />
         </mxCell>
       </root>
